@@ -1,45 +1,26 @@
 %% =====================================================================
 %%  3 / 7   Methodology  方法                                    成员 3
-%%  两阶段混合方法：目的性综述 + 情景问卷实验
+%%  仿写对象：课本 Unit 4 p.57--58 范文（三段，每段一类信息，细节放括号）、
+%%            p.60 被动语态例句、p.68--70 方法描述要点。
+%%  段落分工：Overview；Phase 1 的对象/抽样 + 步骤；Phase 2 的对象/材料 + 步骤/统计。
+%%  写法：被动 + 过去时（已做）；将做的步骤用 will be；Firstly/Secondly/After；
+%%        数字、单位、软件、缩写放括号；不用 we，不讲“本节如何组织”。
 %% =====================================================================
 \section{Methodology}
 \label{sec:method}
 
-\paragraph{Design.}
-This is a mixed-methods study in two phases. Phase~1 is a purposive review that builds the corpus and derives the themes reported in Section~\ref{sec:results}. Phase~2 is a vignette experiment, specified in Section~\ref{sec:protocol}, that tests the advisor-to-agent shift on human judgements. Phase~1 is described first because the themes it produces determine what Phase~2 has to measure.
+The study aims to examine under what conditions clinical action can be legitimately delegated to a medical AI agent. A qualitative review of the literature (Phase~1) was used to identify the main themes from secondary data, and a quantitative vignette experiment (Phase~2) was designed to test these themes with primary data collected by questionnaire.
 
 \subsection{Phase 1: Purposive Review}
 \label{sec:review}
 
-\paragraph{Search strategy.}
-We searched PubMed, Web of Science, Scopus, IEEE Xplore, the ACM Digital Library and arXiv for work published between January 2019 and September 2026. The query combined an agent term, a clinical term and a governance term:
-\begin{quote}\small
-\texttt{("medical agent" OR "clinical agent" OR "agentic AI")\\
-AND ("human-in-the-loop" OR oversight OR accountability\\
-OR deskilling OR trust)}
-\end{quote}
-Backward and forward snowballing from the included studies supplemented the database search. We do not claim a systematic review and report no PRISMA diagram: the aim was a defensible and reproducible corpus, not an exhaustive one, and the coding below is reported so that a reader can contest it.
+The materials were seventeen sources (nine conceptual works, six benchmark evaluations, one clinical observational study and one attitude survey) published between 2019 and 2026. They were selected purposively from the literature on medical AI, so that the corpus covered all levels of autonomy, from decision support (L0) to supervised agents (L3). A source was retained if it concerned an AI system in clinical medicine, discussed the human role, oversight, accountability or trust, and was peer-reviewed or a preprint with a documented method. Sources that evaluated single-turn question answering without any action, or lay outside clinical medicine, were excluded. Foundational work on automation \citep{bainbridge1983,parasuraman2010} was used as background and was not coded.
 
-\paragraph{Selection criteria.}
-Studies were included if they (i) concern a system that plans, uses tools or executes multi-step clinical tasks, (ii) discuss the human role, oversight, accountability or trust, and (iii) are peer-reviewed or a preprint with a documented method. They were excluded if they (i) evaluate single-turn question answering with no action, (ii) report no analysis of the human--AI arrangement, or (iii) lie outside clinical medicine. Seventeen studies were retained; they are listed in Table~\ref{tab:corpus}.
-
-\paragraph{Extraction and coding.}
-Each study was coded on four fields: the core claim; the locus of action, that is, who acts on the patient or the record; the level of autonomy, using the four-level scheme of \citet{ye2025autonomy}; and the type of evidence, classified as benchmark, clinical, attitude survey or conceptual. Coding was deductive for the autonomy field and inductive for the thematic analysis. A theme was retained only if at least two independent sources supported it.
+Firstly, each source was read in the sections concerning the human role. Secondly, it was coded on four fields: the core claim, the locus of action (who acts on the patient or the record), the level of autonomy (L0--L3; \citealp{ye2025autonomy}) and the type of evidence (benchmark, clinical, attitude survey or conceptual). After coding, the core claims were grouped into themes, and a theme was retained if it was supported by at least two sources. The coded sources are listed in Table~\ref{tab:corpus}.
 
 \subsection{Phase 2: Vignette Experiment}
 \label{sec:protocol}
 
-\paragraph{Design.}
-A $2\times2$ between-subjects design crosses the role of the system (advisor versus agent) with disclosure (the system is identified as an AI agent versus left unspecified). Participants see four fictional vignettes at one randomly assigned condition, which keeps the vignettes within-subject while preventing contamination across conditions.
+A $2\times2\times4$ mixed design will be used. Fifty-two adult volunteers (aged 18--45 years) without a clinical qualification will be recruited through university networks and online groups, and randomly assigned to four groups of 13 according to the role of the system (advisor or agent) and the disclosure of its identity (AI agent or unspecified). A convenience sample was chosen because of limited time and resources. Four fictional vignettes (80--120 words each) were written to span clinical risk: an oral hypoglycaemic adjustment (low), the withholding of an ACE inhibitor for hyperkalaemia (moderate), the automatic escalation of chest-pain triage (moderate to high) and an automated adverse-drug-reaction notice sent to a patient (high). Each vignette exists in four versions, which differ only in the final sentence.
 
-\paragraph{Materials.}
-Four vignettes were written to span clinical risk: oral hypoglycaemic adjustment (low), withholding an ACE inhibitor for hyperkalaemia with an urgent electrocardiogram (moderate), automatic triage escalation for chest pain (moderate to high), and an automated adverse-drug-reaction notice sent to a patient (high). Each vignette exists in four versions that differ only in the final sentence, which states either that the system recommends an action or that it has already carried it out, and either names the system as an AI agent or leaves the actor unspecified.
-
-\paragraph{Measures.}
-A manipulation check asks who completed the action. Trust is measured with three seven-point items, willingness to delegate with two (one reverse-scored), responsibility attribution with a single forced-choice item, and perceived risk with one item. Background variables are collected last.
-
-\paragraph{Analysis plan.}
-Trust items are averaged after internal consistency is confirmed (Cronbach's $\alpha>0.7$). Effects are tested with a two-way analysis of variance on role and disclosure, and responsibility attribution with a chi-square test of independence. If fewer than forty valid responses are obtained, the design falls back to independent-samples $t$ tests per vignette, reported with Cohen's $d$.
-
-\paragraph{Ethics.}
-Participation is voluntary and anonymous. No real patient data are used and all vignettes are fictional. The protocol is specified in full here so that the design can be assessed independently of what it eventually measures.
+Firstly, the four vignettes will be presented to each participant in a random order. Secondly, after each vignette, trust (three items), willingness to delegate (two items, one reverse-scored), responsibility attribution (one forced-choice item) and perceived risk (one item) will be measured on seven-point scales, and a manipulation check will ask who completed the action. Finally, background information (age, gender and field of study) will be collected. Responses completed in less than 60 seconds or failing the manipulation check will be excluded. The trust items will be averaged once Cronbach's $\alpha$ exceeds 0.7, and the ratings will be analysed with a mixed-design analysis of variance (ANOVA) using JASP. Responsibility attribution will be tested with a chi-square test, and $p\leq0.05$ will be considered statistically significant. If fewer than 40 valid responses are obtained, the results will be reported descriptively.
